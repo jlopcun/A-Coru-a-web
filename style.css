@@ -23,7 +23,7 @@ body::after{
     position:absolute;
     width:500px;
     height:500px;
-    top:40%;
+    top:50%;
     right:0;
    clip-path:circle(50% at 100% 50%);
     z-index:-1;
@@ -37,7 +37,7 @@ body::before{
     position:absolute;
     width:300px;
     height:300px;
-    bottom:-20px;
+    top:300px;
     left:0;
    clip-path:circle(50% at 0% 50%);
     z-index:-1;
@@ -74,7 +74,7 @@ body::before{
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    margin-bottom:3rem;
+    margin-bottom:6rem;
     
 }
 .coru-lema{
@@ -95,10 +95,10 @@ body::before{
     align-items:center;
     box-shadow:0px 0px 10px 5px rgba(0 0 0 / .5);
     border-radius:20px;
-    margin:50px .5rem;
+    margin:50px 1.3rem;
     overflow: hidden;
     min-height:13rem;
-    
+    transition:transform .5s;
 
 }
 .img-container{
@@ -159,7 +159,7 @@ body::before{
     box-shadow:0 0 10px rgba(0 0 0 /1);
     margin-bottom:1rem;
     width:0;
-    transition:width .3s;
+    transition:width .5s;
 }
 
 .menu-opener{
@@ -190,7 +190,7 @@ body::before{
     display:flex;
     justify-content: center;
     align-items:flex-end;
- 
+    
     
     
 }
@@ -205,4 +205,14 @@ body::before{
 .github-enlc{
     width:auto;
     height:auto;
+}
+.contents-card:hover{
+    transform:scale(1.1) rotate(15deg);
+}
+
+@media screen and (min-height:2050px){
+    .foot{
+        position:absolute;
+        bottom: 0;
+    }
 }
