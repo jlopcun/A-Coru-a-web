@@ -22,6 +22,4 @@ menuOpener.addEventListener('click',()=>{
     menuOpener.classList.toggle('opened');
     menu__ul.classList.toggle('opened');
     menu__ulItem.forEach(n=>n.classList.toggle('opened'))
-        
-    
 })
