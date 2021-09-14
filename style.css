@@ -16,6 +16,9 @@ body{
     display:flex;
     flex-flow:column wrap;
 }
+.bodyNoOverflow{
+    overflow:hidden;
+}
 body::after{
     content:'';
     background-color: #0af;
@@ -215,10 +218,58 @@ body::before{
 .contents-card:hover{
     transform:scale(1.1) rotate(15deg);
 }
+.menu-link{
+    text-decoration: none;
+    color:#000;
+    font-family:sans-serif;
+    padding:20px;
+    border-radius:10px;
+}
+.menu-link:hover{
+    color:#555;
+    background-color:rgb(31, 103, 138);
+}
+
 
 @media screen and (min-height:2050px){
     .foot{
         position:absolute;
         bottom: 0;
+    }
+}
+
+
+@media screen and (min-width:1200px){
+    .menu{
+        position:fixed;
+        top:0;
+        right:0;
+        width:0;
+        height:100%;
+       
+    }
+    .menu.opened{
+        width:100%;
+    }
+    .menu-opener{
+        top:0;
+        right:0;
+        margin-bottom:0;
+       
+    }
+    .menu__ul{
+        transform: translateX(100vw);
+        height:100vh;
+        transition:all .5s;
+        flex-flow: column wrap;
+        border-radius:0px;
+        font-size:200px;
+        margin:0;
+    }
+    .menu__ul.opened{
+        width:100vw;
+        font-size:200px;
+        transform:translateX(0vw);
+        
     }
 }

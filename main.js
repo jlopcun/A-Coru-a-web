@@ -18,8 +18,11 @@ window.addEventListener('scroll',()=>{
 const menuOpener = document.getElementById('menu-opener__icon');
 const menu__ul = document.getElementById('menu__ul');
 const menu__ulItem = document.querySelectorAll('.menu__ul-item');
+const menu = document.getElementById('menu');
 menuOpener.addEventListener('click',()=>{
     menuOpener.classList.toggle('opened');
     menu__ul.classList.toggle('opened');
-    menu__ulItem.forEach(n=>n.classList.toggle('opened'))
+    menu__ulItem.forEach(n=>n.classList.toggle('opened'));
+    document.body.classList.toggle('bodyNoOverflow');
+    menu.classList.toggle('opened');
 })
