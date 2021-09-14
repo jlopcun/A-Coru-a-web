@@ -46,7 +46,8 @@ body::before{
 }
 .page-header{
     width:100%;
-    min-height:50vmax;
+    height:30vmax;
+    min-height:400px;
     text-align:center;
     background-color: #0af;
     clip-path:circle(var(--circle-top) at 50% 0);
